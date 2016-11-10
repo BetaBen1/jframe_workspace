@@ -1,0 +1,20 @@
+package betaben.jframeprogject;
+
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		JFrame jframe = new JFrame();
+		jframe.setDefaultCloseOperation(jframe.EXIT_ON_CLOSE);
+		jframe.setTitle("Calculator");
+		jframe.setSize(1080, 1920);
+		jframe.setBackground(Color.black);
+		jframe.setVisible(true);
+
+		
+	}
+
+}
