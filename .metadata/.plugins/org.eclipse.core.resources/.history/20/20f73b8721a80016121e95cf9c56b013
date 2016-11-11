@@ -116,18 +116,7 @@ public class Calculator extends JFrame {
 		btnCalculate.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e)
 			  {
-				if(addButton.isSelected()){
-					
-				}
-				if(subtractButton.isSelected()){
-					
-				}
-				if(multiplyButton.isSelected()){
-					
-				}
-				if(divideButton.isSelected()){
-					
-				}
+				label.setText("1");
 			  }
 		});
 	}
