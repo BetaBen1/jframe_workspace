@@ -1,17 +1,20 @@
 package betaben.calculator;
 
+import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JRadioButton;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class Calculator extends JFrame {
 
@@ -25,8 +28,8 @@ public class Calculator extends JFrame {
 			public void run() {
 				try {
 					Calculator frame = new Calculator();
-					frame.getContentPane().setBackground(Color.DARK_GRAY);
 					frame.setVisible(true);
+					frame.getContentPane().setBackground(Color.DARK_GRAY);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -60,7 +63,6 @@ public class Calculator extends JFrame {
 		JRadioButton addButton = new JRadioButton("+");
 		addButton.setBounds(286, 85, 141, 23);
 		addButton.setForeground(Color.WHITE);
-		addButton.setSelected(true);
 		contentPane.add(addButton);
 		
 		JRadioButton subtractButton = new JRadioButton("-");
@@ -79,7 +81,7 @@ public class Calculator extends JFrame {
 		contentPane.add(divideButton);
 		
 		JLabel label = new JLabel("0");
-		label.setBounds(6, 219, 278, 16);
+		label.setBounds(126, 219, 61, 16);
 		label.setForeground(Color.WHITE);
 		contentPane.add(label);
 		
@@ -123,7 +125,7 @@ public class Calculator extends JFrame {
 			public void actionPerformed(ActionEvent e)
 			  {		
 				
-				if(isInteger(firstText.getText())==true && isInteger(secondText.getText())==true){
+				if(isInteger(firstText.getText())==true){
 					if(addButton.isSelected()){
 						int addInt = Integer.valueOf(firstText.getText())+Integer.valueOf(secondText.getText());
 						String addString = Integer.toString(addInt);
@@ -146,8 +148,8 @@ public class Calculator extends JFrame {
 						}
 					}
 			  
-				else {
-					label.setText("Error: The text you entered is not a number.");
+				if(isInteger(firstText.getText())==false){
+					label.setText("Error: The text you intered is not a number.");
 				}
 			  }
 		});  
