@@ -1,6 +1,7 @@
 package betaben.calculator;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +28,7 @@ public class Calculator extends JFrame {
 				try {
 					Calculator frame = new Calculator();
 					frame.setVisible(true);
+					frame.getContentPane().setBackground(Color.DARK_GRAY);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -49,32 +51,37 @@ public class Calculator extends JFrame {
 		btnCalculate.setBounds(68, 99, 173, 72);
 		contentPane.add(btnCalculate);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(6, 6, 421, 16);
-		contentPane.add(textArea);
+		JTextArea firstText = new JTextArea();
+		firstText.setBounds(6, 6, 421, 16);
+		contentPane.add(firstText);
 		
-		JTextArea textArea_1 = new JTextArea();
-		textArea_1.setBounds(6, 57, 421, 16);
-		contentPane.add(textArea_1);
+		JTextArea secondText = new JTextArea();
+		secondText.setBounds(6, 57, 421, 16);
+		contentPane.add(secondText);
 		
 		JRadioButton addButton = new JRadioButton("+");
 		addButton.setBounds(286, 85, 141, 23);
+		addButton.setForeground(Color.WHITE);
 		contentPane.add(addButton);
 		
 		JRadioButton subtractButton = new JRadioButton("-");
 		subtractButton.setBounds(286, 122, 141, 23);
+		subtractButton.setForeground(Color.WHITE);
 		contentPane.add(subtractButton);
 		
 		JRadioButton multiplyButton = new JRadioButton("x");
 		multiplyButton.setBounds(286, 158, 141, 23);
+		multiplyButton.setForeground(Color.WHITE);
 		contentPane.add(multiplyButton);
 		
 		JRadioButton divideButton = new JRadioButton("/");
 		divideButton.setBounds(286, 193, 141, 23);
+		divideButton.setForeground(Color.WHITE);
 		contentPane.add(divideButton);
 		
 		JLabel label = new JLabel("0");
 		label.setBounds(126, 219, 61, 16);
+		label.setForeground(Color.WHITE);
 		contentPane.add(label);
 		
 		addButton.addActionListener(new ActionListener(){
@@ -115,18 +122,26 @@ public class Calculator extends JFrame {
 		
 		btnCalculate.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e)
-			  {
+			  {				
 				if(addButton.isSelected()){
-					
+					int addInt = Integer.valueOf(firstText.getText())+Integer.valueOf(secondText.getText());
+					String addString = Integer.toString(addInt);
+					label.setText(addString);
 				}
 				if(subtractButton.isSelected()){
-					
+					int subtractInt = Integer.valueOf(firstText.getText())-Integer.valueOf(secondText.getText());
+					String subtractString = Integer.toString(subtractInt);
+					label.setText(subtractString);
 				}
 				if(multiplyButton.isSelected()){
-					
+					int multiplyInt = Integer.valueOf(firstText.getText())*Integer.valueOf(secondText.getText());
+					String multiplyString = Integer.toString(multiplyInt);
+					label.setText(multiplyString);
 				}
 				if(divideButton.isSelected()){
-					
+					int divideInt = Integer.valueOf(firstText.getText())/Integer.valueOf(secondText.getText());
+					String divideString = Integer.toString(divideInt);
+					label.setText(divideString);
 				}
 			  }
 		});
