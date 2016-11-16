@@ -1,0 +1,113 @@
+package com.betaben.calculator;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Calculator extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Calculator frame = new Calculator();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Calculator() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 300, 500, 500);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel display = new JLabel("Label");
+		display.setBounds(6, 6, 488, 68);
+		contentPane.add(display);
+		
+		JButton zeroButton = new JButton("0");
+		zeroButton.setBounds(6, 381, 117, 90);
+		contentPane.add(zeroButton);
+		
+		JButton oneButton = new JButton("1");
+		oneButton.setBounds(6, 293, 117, 90);
+		contentPane.add(oneButton);
+		
+		JButton twoButton = new JButton("2");
+		twoButton.setBounds(123, 293, 117, 90);
+		contentPane.add(twoButton);
+		
+		JButton button_3 = new JButton("3");
+		button_3.setBounds(240, 293, 117, 90);
+		contentPane.add(button_3);
+		
+		JButton button_4 = new JButton("4");
+		button_4.setBounds(6, 209, 117, 90);
+		contentPane.add(button_4);
+		
+		JButton button_5 = new JButton("5");
+		button_5.setBounds(123, 209, 117, 90);
+		contentPane.add(button_5);
+		
+		JButton button_6 = new JButton("6");
+		button_6.setBounds(240, 209, 117, 90);
+		contentPane.add(button_6);
+		
+		JButton button_7 = new JButton("7");
+		button_7.setBounds(6, 121, 117, 90);
+		contentPane.add(button_7);
+		
+		JButton button_8 = new JButton("8");
+		button_8.setBounds(123, 121, 117, 90);
+		contentPane.add(button_8);
+		
+		JButton button_9 = new JButton("9");
+		button_9.setBounds(240, 121, 117, 90);
+		contentPane.add(button_9);
+		
+		JButton button_10 = new JButton("=");
+		button_10.setBounds(377, 310, 117, 162);
+		contentPane.add(button_10);
+		
+		JButton button_11 = new JButton("÷");
+		button_11.setBounds(377, 257, 117, 55);
+		contentPane.add(button_11);
+		
+		JButton btnX = new JButton("x");
+		btnX.setBounds(377, 209, 117, 48);
+		contentPane.add(btnX);
+		
+		JButton btnNewButton = new JButton("-");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(377, 146, 117, 29);
+		contentPane.add(btnNewButton);
+		
+		JButton button_12 = new JButton("+");
+		button_12.setBounds(377, 103, 117, 29);
+		contentPane.add(button_12);
+	}
+}
