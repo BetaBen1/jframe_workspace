@@ -4,4 +4,8 @@
 		id="org.eclipse.wb.swing.components javax.swing.JButton"
 		category="org.eclipse.wb.swing.layouts"
 		nextEntry="org.eclipse.wb.swing.layouts java.awt.CardLayout"/>
+	<moveEntry
+		id="org.eclipse.wb.swing.layouts java.awt.CardLayout"
+		category="org.eclipse.wb.swing.layouts"
+		nextEntry="org.eclipse.wb.swing.layouts java.awt.GridBagLayout"/>
 </commands>

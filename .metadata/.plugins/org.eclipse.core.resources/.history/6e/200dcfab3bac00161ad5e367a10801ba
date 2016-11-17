@@ -114,7 +114,7 @@ public class Calculator extends JFrame {
 		contentPane.add(sixButton);
 		
 		JButton sevenButton = new JButton("7");
-		sevenButton.setBounds(6, 125, 117, 90);
+		sevenButton.setBounds(6, 121, 117, 90);
 		sevenButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				display.setText(display.getText()+"7");
@@ -123,7 +123,7 @@ public class Calculator extends JFrame {
 		contentPane.add(sevenButton);
 		
 		JButton eightButton = new JButton("8");
-		eightButton.setBounds(123, 125, 117, 90);
+		eightButton.setBounds(123, 121, 117, 90);
 		eightButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				display.setText(display.getText()+"8");
@@ -132,7 +132,7 @@ public class Calculator extends JFrame {
 		contentPane.add(eightButton);
 		
 		JButton nineButton = new JButton("9");
-		nineButton.setBounds(240, 125, 117, 90);
+		nineButton.setBounds(240, 121, 117, 90);
 		nineButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				display.setText(display.getText()+"9");
@@ -141,7 +141,7 @@ public class Calculator extends JFrame {
 		contentPane.add(nineButton);
 		
 		JButton equalButton = new JButton("=");
-		equalButton.setBounds(377, 248, 117, 223);
+		equalButton.setBounds(377, 310, 117, 162);
 		equalButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				//Remember to set what happened plus minus etc
@@ -174,7 +174,7 @@ public class Calculator extends JFrame {
 		contentPane.add(equalButton);
 		
 		JButton divideButton = new JButton("÷");
-		divideButton.setBounds(123, 73, 117, 55);
+		divideButton.setBounds(377, 257, 117, 55);
 		divideButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				firstNumber = Integer.valueOf(display.getText());
@@ -185,7 +185,7 @@ public class Calculator extends JFrame {
 		contentPane.add(divideButton);
 		
 		JButton multiplyButton = new JButton("x");
-		multiplyButton.setBounds(240, 76, 117, 48);
+		multiplyButton.setBounds(377, 209, 117, 48);
 		multiplyButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				firstNumber = Integer.valueOf(display.getText());
@@ -196,7 +196,7 @@ public class Calculator extends JFrame {
 		contentPane.add(multiplyButton);
 		
 		JButton subtractButton = new JButton("-");
-		subtractButton.setBounds(377, 86, 117, 29);
+		subtractButton.setBounds(377, 146, 117, 29);
 		subtractButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNumber = Integer.valueOf(display.getText());
@@ -207,7 +207,7 @@ public class Calculator extends JFrame {
 		contentPane.add(subtractButton);
 		
 		JButton addButton = new JButton("+");
-		addButton.setBounds(377, 125, 117, 126);
+		addButton.setBounds(377, 103, 117, 29);
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				firstNumber = Integer.valueOf(display.getText());
@@ -218,7 +218,7 @@ public class Calculator extends JFrame {
 		contentPane.add(addButton);
 		
 		JButton clearButton = new JButton("Clear");
-		clearButton.setBounds(6, 86, 117, 29);
+		clearButton.setBounds(6, 103, 117, 29);
 		clearButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				firstNumber = 0;
